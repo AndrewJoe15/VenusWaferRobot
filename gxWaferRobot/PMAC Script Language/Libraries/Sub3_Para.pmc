@@ -1,0 +1,29 @@
+open subprog Para
+// --------------------User Code Goes Here------------------------
+sub: StationParaIn(imType,imWorkARM,imStationPos,imWaferSize,imPitch,imStroke,imOffset,imTotalSlotNumber,imRetractPos)
+
+	switch (imType)
+	
+	{
+		case 1 :
+		WorkARM_A=imWorkARM
+
+
+		break;
+	
+	}
+	
+
+
+return //StationEnd
+
+sub: ParaIn(imPara,&omPara,&Status)
+	
+	omPara=imPara
+	
+
+return
+close
+
+
+

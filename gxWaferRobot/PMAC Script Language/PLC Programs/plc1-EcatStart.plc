@@ -1,0 +1,33 @@
+global Ecat_error
+open plc Myplc1
+// --------------------User Code Goes Here------------------------
+cmd"Sys.ModbusServerEnable = 1" //启用Modbus通讯
+call Timer.sec(0.2)
+SYSTEM "/var/ftp/usrflash/Project/C\ Language/Background\ Programs/capp1.out"
+call Timer.sec(0.2) 
+cmd"ECAT[0].Enable = 1" //激活EtherCAT
+call Timer.sec(10)         //延时5秒等待EtherCAT连接
+ 
+if(ECAT[0].Enable == 0) //如果EtherCAT连接失败，重置EtherCAT，继续连接，否则发送错误代码
+{
+	cmd"ecat reset"
+	call Timer.sec(5)
+	cmd"ECAT[0].Enable = 1"
+	call Timer.sec(10)
+	if(ECAT[0].Enable == 0)
+	{
+		Ecat_error=1;
+	}
+	else
+	{
+		Ecat_error=0;
+		
+	}
+}
+else
+{
+	enable plc 2,4
+	disable plc Myplc1
+}
+
+close

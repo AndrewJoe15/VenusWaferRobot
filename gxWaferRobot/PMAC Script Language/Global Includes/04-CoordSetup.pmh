@@ -1,0 +1,9 @@
+undefine all
+Sys.MaxCoords=2
+&1
+#1->I
+#2->I
+#3->I
+#4->I
+Coord[1].AltFeedRate=0
+Coord[1].HomeRequired=0

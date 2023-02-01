@@ -1,0 +1,50 @@
+/*For more information see notes.txt in the Documentation folder */
+global MoveEnd
+open prog Myprog1
+// --------------------User Code Goes Here------------------------
+
+MoveEnd=0
+abs
+linear
+ta 500
+ts 300
+F 60
+Gather.Enable=2   //伺服中断数据收集激活控制
+X -2 XX -2
+dwell 0
+Z 0 U 140
+dwell 0
+Z 250 U -50
+dwell 0
+X 237
+dwell 0
+Z 260
+dwell 0
+X -2
+dwell 0
+U 140
+dwell 0
+X 237
+dwell 0
+Z 250
+dwell 0
+X -2
+dwell 0
+XX 237
+dwell 0
+Z 260
+dwell 0
+XX -2
+dwell 0
+U -50
+dwell 0
+XX 237
+dwell 0
+Z 250
+dwell 0
+XX -2
+dwell 0
+Gather.Enable=0
+MoveEnd=1
+close
+

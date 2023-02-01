@@ -1,0 +1,138 @@
+//Z轴  升降
+Motor[1].ServoCtrl=1  //激活电机
+Motor[1].Ctrl=Sys.PosCtrl  //选择位置控制算法
+Motor[1].pDac= ECAT[0].IO[3].Data.a //Slave_1002_InoSV660N_1002_607A_0_Targetposition     命令输出指针
+Motor[1].pEnc=EncTable[1].a   //位置环反馈指针	
+Motor[1].pEnc2=EncTable[1].a  //速度环反馈指针
+Motor[1].pAmpEnable= ECAT[0].IO[2].Data.a //Slave_1002_InoSV660N_1002_6040_0_Controlword   放大器输出标志指针 控制字
+Motor[1].AmpEnableBit=0					// 使能位   要使用符合DS-402标准的EtherCAT驱动器的放大器使能位， Motor[x].AmpEnableBit应该设置为0。
+Motor[1].pAmpFault= ECAT[0].IO[4109].Data.a  //Slave_1002_InoSV660N_1002_6041_0_Statusword    放大器输入标志指针  状态字
+Motor[1].AmpFaultBit=3      //故障位     要使用符合DS-402标准的EtherCAT驱动器的放大器故障位， Motor[x].AmpFaultBit应该设置为3。
+Motor[1].AmpFaultLevel=1  //放大器故障逻辑状态	  设置为1时高电平有效，为0时低电平有效
+Motor[1].pLimits=0     //硬限位信号
+Motor[1].WarnFeLimit=0.6 //跟随警告误差
+Motor[1].FatalFeLimit=1 //最大跟随误差
+Motor[1].MaxSpeed=200/1000 //最大速度,possf参数为1时，脉冲/ms单位
+Motor[1].PosSf=4/8388608  //位置环比例
+Motor[1].Pos2Sf=4/8388608  //速度环比例
+Motor[1].AbortTa=300
+Motor[1].AbortTs=300
+Motor[1].HomePos=0 //原点位置
+Motor[1].MaxPos=340 //最大限位
+Motor[1].MinPos=-0.0001 //最小限位
+Motor[1].BrakeOnDelay=0//抱闸关闭延时
+Motor[1].BrakeOffDelay=1500//抱闸打开闭延时 ms
+Motor[1].BrakeOutBit=4
+Motor[1].pBrakeOut=ECAT[0].IO[0].Data.a  
+
+Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction=$16
+Motor[1].CaptureMode=0
+Motor[1].pCaptPos= ECAT[0].IO[4114].Data.a  //Slave_1002_InoSV660N_1002_60BA_0_Touchprobepos1posvalue
+Motor[1].pCaptFlag=  ECAT[0].IO[4096].Data.a//ECAT[0].IO[4113].Data.a  //Slave_1002_InoSV660N_1002_60B9_0_Touchprobestatus
+Motor[1].CaptFlagBit=0
+Motor[1].pCaptEna= ECAT[0].IO[4].Data.a  //Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction
+Motor[1].CaptEnaBit=0
+
+
+
+
+
+//T轴  旋转
+Motor[2].ServoCtrl=1  //激活电机
+Motor[2].Ctrl=Sys.PosCtrl  //选择位置控制算法
+Motor[2].pDac= ECAT[0].IO[7].Data.a //Slave_1003_InoSV660N_1003_607A_0_Targetposition     命令输出指针
+Motor[2].pEnc=EncTable[2].a   //位置环反馈指针	
+Motor[2].pEnc2=EncTable[2].a  //速度环反馈指针
+Motor[2].pAmpEnable=  ECAT[0].IO[6].Data.a //Slave_1003_InoSV660N_1003_6040_0_Controlword   放大器输出标志指针 控制字
+Motor[2].AmpEnableBit=0					// 使能位   要使用符合DS-402标准的EtherCAT驱动器的放大器使能位， Motor[x].AmpEnableBit应该设置为0。
+Motor[2].pAmpFault= ECAT[0].IO[4118].Data.a  //Slave_1003_InoSV660N_1003_6041_0_Statusword    放大器输入标志指针  状态字
+Motor[2].AmpFaultBit=3      //故障位     要使用符合DS-402标准的EtherCAT驱动器的放大器故障位， Motor[x].AmpFaultBit应该设置为3。
+Motor[2].AmpFaultLevel=1  //放大器故障逻辑状态	  设置为1时高电平有效，为0时低电平有效
+Motor[2].pLimits=0     //硬限位信号
+Motor[2].WarnFeLimit=0.6 //跟随警告误差
+Motor[2].FatalFeLimit=1 //最大跟随误差
+Motor[2].MaxSpeed=150/1000 //最大速度,possf参数为1时，脉冲/ms单位
+Motor[2].PosSf=2.4/8388608  //位置环比例
+Motor[2].Pos2Sf=2.4/8388608  //速度环比例
+
+Motor[2].HomePos=0  //原点位置
+Motor[2].MaxPos=170 //最大限位		
+Motor[2].MinPos=-170 //最小限位
+//Motor[2].BrakeOnDelay=0//抱闸关闭延时
+//Motor[2].BrakeOffDelay=0.3//抱闸打开闭延时
+
+//Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction=$16
+Motor[2].CaptureMode=1  
+Motor[2].pCaptPos= ECAT[0].IO[4123].Data.a  //Slave_1002_InoSV660N_1002_60BA_0_Touchprobepos1posvalue
+Motor[2].pCaptFlag=  ECAT[0].IO[4096].Data.a//ECAT[0].IO[4113].Data.a  //Slave_1002_InoSV660N_1002_60B9_0_Touchprobestatus
+Motor[2].CaptFlagBit=0
+Motor[2].pCaptEna= ECAT[0].IO[8].Data.a  //Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction
+Motor[2].CaptEnaBit=0
+
+
+//R轴 
+Motor[3].ServoCtrl=1  //激活电机
+Motor[3].Ctrl=Sys.PosCtrl  //选择位置控制算法
+Motor[3].pDac= ECAT[0].IO[11].Data.a //Slave_1004_InoSV660N_1004_607A_0_Targetposition     命令输出指针
+Motor[3].pEnc=EncTable[3].a   //位置环反馈指针	
+Motor[3].pEnc2=EncTable[3].a  //速度环反馈指针
+Motor[3].pAmpEnable=  ECAT[0].IO[10].Data.a //Slave_1004_InoSV660N_1004_6040_0_Controlword   放大器输出标志指针 控制字
+Motor[3].AmpEnableBit=0					// 使能位   要使用符合DS-402标准的EtherCAT驱动器的放大器使能位， Motor[x].AmpEnableBit应该设置为0。
+Motor[3].pAmpFault= ECAT[0].IO[4127].Data.a  //Slave_1004_InoSV660N_1004_6041_0_Statusword    放大器输入标志指针  状态字
+Motor[3].AmpFaultBit=3      //故障位     要使用符合DS-402标准的EtherCAT驱动器的放大器故障位， Motor[x].AmpFaultBit应该设置为3。
+Motor[3].AmpFaultLevel=1  //放大器故障逻辑状态	  设置为1时高电平有效，为0时低电平有效
+Motor[3].pLimits=0     //硬限位信号
+Motor[3].WarnFeLimit=0.5 //跟随警告误差
+Motor[3].FatalFeLimit=1 //最大跟随误差
+Motor[3].MaxSpeed=40/1000 //最大速度,possf参数为1时，脉冲/ms单位
+Motor[3].PosSf=3.6/8388608  //位置环比例
+Motor[3].Pos2Sf=3.6/8388608  //速度环比例
+
+Motor[3].HomePos=0  //原点位置
+Motor[3].MaxPos=75 //最大限位     电机位置，不是坐标位置
+Motor[3].MinPos=-75 //最小限位    电机位置，不是坐标位置
+//Motor[3].BrakeOnDelay=0//抱闸关闭延时
+//Motor[3].BrakeOffDelay=0.3//抱闸打开闭延时
+
+//Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction=$16
+Motor[3].CaptureMode=1  
+Motor[3].pCaptPos=ECAT[0].IO[4132].Data.a  //Slave_1002_InoSV660N_1002_60BA_0_Touchprobepos1posvalue
+Motor[3].pCaptFlag=  ECAT[0].IO[4096].Data.a//ECAT[0].IO[4113].Data.a  //Slave_1002_InoSV660N_1002_60B9_0_Touchprobestatus
+Motor[3].CaptFlagBit=0
+Motor[3].pCaptEna=ECAT[0].IO[12].Data.a  //Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction
+Motor[3].CaptEnaBit=0
+
+
+
+//W轴
+Motor[4].ServoCtrl=1  //激活电机
+Motor[4].Ctrl=Sys.PosCtrl  //选择位置控制算法
+Motor[4].pDac=  ECAT[0].IO[15].Data.a //Slave_1005_InoSV660N_1005_607A_0_Targetposition     命令输出指针
+Motor[4].pEnc=EncTable[4].a   //位置环反馈指针	
+Motor[4].pEnc2=EncTable[4].a  //速度环反馈指针
+Motor[4].pAmpEnable= ECAT[0].IO[14].Data.a //Slave_1005_InoSV660N_1005_6040_0_Controlword   放大器输出标志指针 控制字
+Motor[4].AmpEnableBit=0					// 使能位   要使用符合DS-402标准的EtherCAT驱动器的放大器使能位， Motor[x].AmpEnableBit应该设置为0。
+Motor[4].pAmpFault= ECAT[0].IO[4136].Data.a  //Slave_1005_InoSV660N_1005_6041_0_Statusword    放大器输入标志指针  状态字
+Motor[4].AmpFaultBit=3      //故障位     要使用符合DS-402标准的EtherCAT驱动器的放大器故障位， Motor[x].AmpFaultBit应该设置为3。
+Motor[4].AmpFaultLevel=1  //放大器故障逻辑状态	  设置为1时高电平有效，为0时低电平有效
+Motor[4].pLimits=0     //硬限位信号
+Motor[4].WarnFeLimit=0.5 //跟随警告误差
+Motor[4].FatalFeLimit=1 //最大跟随误差
+Motor[4].MaxSpeed=40/1000 //最大速度,possf参数为1时，脉冲/ms单位
+Motor[4].PosSf=3.6/8388608  //位置环比例
+Motor[4].Pos2Sf=3.6/8388608  //速度环比例
+
+Motor[4].HomePos=0 //原点位置
+Motor[4].MaxPos=75 //最大限位
+Motor[4].MinPos=-75 //最小限位
+//Motor[4].BrakeOnDelay=0//抱闸关闭延时
+//Motor[4].BrakeOffDelay=0.3//抱闸打开闭延时
+
+//Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction=$16
+Motor[4].CaptureMode=1  
+Motor[4].pCaptPos= ECAT[0].IO[4141].Data.a  //Slave_1002_InoSV660N_1002_60BA_0_Touchprobepos1posvalue
+Motor[4].pCaptFlag=  ECAT[0].IO[4096].Data.a//ECAT[0].IO[4113].Data.a  //Slave_1002_InoSV660N_1002_60B9_0_Touchprobestatus
+Motor[4].CaptFlagBit=0
+Motor[4].pCaptEna=ECAT[0].IO[16].Data.a  //Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction
+Motor[4].CaptEnaBit=0
+

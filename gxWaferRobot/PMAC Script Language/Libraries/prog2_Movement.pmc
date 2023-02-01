@@ -1,0 +1,260 @@
+ open subprog Movement
+// --------------------User Code Goes Here------------------------
+sub: HomeSerch(mHomeMode,&ExcutStatus)
+
+		ExcutStatus=0
+	switch (mHomeMode)
+{
+	case 1 :
+		if (Motor[1].AmpEna==1)
+		{
+			home 1
+			call Timer.sec(0.5)
+			while	(Motor[1].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[1].DesVelZero == 0) { }			//	Wait	for	end
+			ExcutStatus=1
+			
+		}
+		else
+		{
+			ExcutStatus=2
+		}
+		mHomeMode=0
+		break;
+	case 2 :
+		if (Motor[2].AmpEna==1)
+		{
+			home 2
+			call Timer.sec(0.5)
+			while	(Motor[2].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[2].DesVelZero == 0) { }			//	Wait	for	end
+			ExcutStatus=1
+			
+		}
+		else
+		{
+			ExcutStatus=2
+		}
+		mHomeMode=0
+		break;
+	case 3 :
+		if (Motor[3].AmpEna==1)
+		{
+			home 3
+			call Timer.sec(0.5)
+			while	(Motor[3].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[3].DesVelZero == 0) { }			//	Wait	for	end
+			ExcutStatus=1
+			
+		}
+		else
+		{
+			ExcutStatus=2
+		}
+		mHomeMode=0
+		break;
+	case 4 :
+		if (Motor[4].AmpEna==1)
+		{
+			home 4
+			call Timer.sec(0.5)
+			while	(Motor[4].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[4].DesVelZero == 0) { }			//	Wait	for	end
+			ExcutStatus=1
+			
+		}
+		else
+		{
+			ExcutStatus=2
+		}
+		mHomeMode=0
+		break;
+	case 5 :
+		if (Motor[1].AmpEna==1 && Motor[2].AmpEna==1 && Motor[3].AmpEna==1 && Motor[4].AmpEna==1)
+		{	
+			home 4
+			call Timer.sec(0.5)
+			while	(Motor[4].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[4].DesVelZero == 0) { }			//	Wait	for	end
+			home 3
+			call Timer.sec(0.5)
+			while	(Motor[3].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[3].DesVelZero == 0) { }			//	Wait	for	end
+			home 2
+			call Timer.sec(0.5)
+			while	(Motor[2].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[2].DesVelZero == 0) { }			//	Wait	for	end
+			home 1
+			call Timer.sec(0.5)
+			while	(Motor[1].HomeInProgress == 0)	{	}	//	Wait	for	start
+			while	(Motor[1].DesVelZero == 0) { }			//	Wait	for	end
+
+			ExcutStatus=1
+		}
+		else
+			{
+				ExcutStatus=2
+			}
+		mHomeMode=0
+		break;
+	default:
+
+		break;
+}
+return //HomeSerch End
+
+
+
+
+
+sub: RobotJog(mZ_JOGP,mZ_JOGN,mT_JOGP,mT_JOGN,mR_JOGP,mR_JOGN,mW_JOGP,mW_JOGN,&mJogStatus)
+	
+	local Latch1P,Latch1N,Latch2P,Latch2N,Latch3P,Latch3N,Latch4P,Latch4N
+		
+	//Z轴点动
+	if(mZ_JOGP==1) 
+		{
+			if(Latch1P==0) // 
+				{
+					Latch1P=1; //
+					jog+1; // Jog forward
+				}
+		}
+	else //
+		{
+			if(Latch1P==1) // 
+				{
+					Latch1P=0; // 
+					jog/1; // Stop jogging
+				}
+		}
+
+
+	if(mZ_JOGN==1) 
+		{
+			if(Latch1N==0) 
+				{
+					Latch1N=1; 
+					jog-1; // Jog reward
+				}
+		}
+	else 
+		{
+			if(Latch1N==1) // 
+				{
+					Latch1N=0; // 
+					jog/1; // Stop jogging
+				}
+		}	
+
+	//T轴点动
+	if(mT_JOGP==1) 
+		{
+			if(Latch2P==0) // 
+				{
+					Latch2P=1; //
+					jog+2; // Jog forward
+				}
+		}
+	else //
+		{
+			if(Latch2P==1) // 
+				{
+					Latch2P=0; // 
+					jog/2; // Stop jogging
+				}
+		}
+
+
+	if(mT_JOGN==1) 
+		{
+			if(Latch2N==0) 
+				{
+					Latch2N=1; 
+					jog-2; // Jog reward
+				}
+		}
+	else 
+		{
+			if(Latch2N==1) // 
+				{
+					Latch2N=0; // 
+					jog/2; // Stop jogging
+				}
+		}	
+
+//R轴点动
+	if(mR_JOGP==1) 
+		{
+			if(Latch3P==0) // 
+				{
+					Latch3P=1; //
+					jog+3; // Jog forward
+				}
+		}
+	else //
+		{
+			if(Latch3P==1) // 
+				{
+					Latch3P=0; // 
+					jog/3; // Stop jogging
+				}
+		}
+
+
+	if(mR_JOGN==1) 
+		{
+			if(Latch3N==0) 
+				{
+					Latch3N=1; 
+					jog-3; // Jog reward
+				}
+		}
+	else 
+		{
+			if(Latch3N==1) // 
+				{
+					Latch3N=0; // 
+					jog/3; // Stop jogging
+				}
+		}	
+
+//W轴点动
+	if(mW_JOGP==1) 
+		{
+			if(Latch4P==0) // 
+				{
+					Latch4P=1; //
+					jog+4; // Jog forward
+				}
+		}
+	else //
+		{
+			if(Latch4P==1) // 
+				{
+					Latch4P=0; // 
+					jog/4; // Stop jogging
+				}
+		}
+
+
+	if(mW_JOGN==1) 
+		{
+			if(Latch4N==0) 
+				{
+					Latch4N=1; 
+					jog-4; // Jog reward
+				}
+		}
+	else 
+		{
+			if(Latch4N==1) // 
+				{
+					Latch4N=0; // 
+					jog/4; // Stop jogging
+				}
+		}	
+return //RobotJog End
+
+
+close

@@ -1,0 +1,61 @@
+EncTable[1].type=1                //捕获控制的位置反馈类型   1位单字采集
+EncTable[1].pEnc= ECAT[0].IO[4110].Data.a  // 编码器表项主源地址 Slave_1002_InoSV660N_1002_6064_0_Positionactualvalue   
+EncTable[1].pEnc1=Sys.pushm  // 编码器表项辅助源地址,, 用户共享内存缓冲区的起始地址
+EncTable[1].index1=0  //编码器表项先转换因子
+EncTable[1].index2=0 //编码器表项次转换因子
+EncTable[1].index3=0
+EncTable[1].index4=0
+EncTable[1].index5=0
+EncTable[1].index6=0
+EncTable[1].MaxDelta=0  //编码器表项最大合法输出更改  
+EncTable[1].SinBias=0  //编码器表项正弦项偏移量
+EncTable[1].CosBias=0 
+EncTable[1].ScaleFactor=1 //编码器表项输出比例因子  ，1为单字
+
+EncTable[2].type=1                //捕获控制的位置反馈类型   1位单字采集
+EncTable[2].pEnc= ECAT[0].IO[4119].Data.a  // 编码器表项主源地址 Slave_1003_InoSV660N_1003_6064_0_Positionactualvalue   
+EncTable[2].pEnc1=Sys.pushm  // 编码器表项辅助源地址,, 用户共享内存缓冲区的起始地址
+EncTable[2].index1=0  //编码器表项先转换因子
+EncTable[2].index2=0 //编码器表项次转换因子
+EncTable[2].index3=0
+EncTable[2].index4=0
+EncTable[2].index5=0
+EncTable[2].index6=0
+EncTable[2].MaxDelta=0  //编码器表项最大合法输出更改  
+EncTable[2].SinBias=0  //编码器表项正弦项偏移量
+EncTable[2].CosBias=0 
+EncTable[2].ScaleFactor=1 //编码器表项输出比例因子  ，1为单字
+
+EncTable[3].type=1                //捕获控制的位置反馈类型   1位单字采集
+EncTable[3].pEnc= ECAT[0].IO[4128].Data.a  // 编码器表项主源地址 Slave_1004_InoSV660N_1004_6064_0_Positionactualvalue   
+EncTable[3].pEnc1=Sys.pushm  // 编码器表项辅助源地址,, 用户共享内存缓冲区的起始地址
+EncTable[3].index1=0  //编码器表项先转换因子
+EncTable[3].index2=0 //编码器表项次转换因子
+EncTable[3].index3=0
+EncTable[3].index4=0
+EncTable[3].index5=0
+EncTable[3].index6=0
+EncTable[3].MaxDelta=0  //编码器表项最大合法输出更改  
+EncTable[3].SinBias=0  //编码器表项正弦项偏移量
+EncTable[3].CosBias=0 
+EncTable[3].ScaleFactor=1 //编码器表项输出比例因子  ，1为单字
+
+EncTable[4].type=1                //捕获控制的位置反馈类型   1位单字采集
+EncTable[4].pEnc= ECAT[0].IO[4137].Data.a  // 编码器表项主源地址 Slave_1005_InoSV660N_1005_6064_0_Positionactualvalue   
+EncTable[4].pEnc1=Sys.pushm  // 编码器表项辅助源地址,, 用户共享内存缓冲区的起始地址
+EncTable[4].index1=0  //编码器表项先转换因子
+EncTable[4].index2=0 //编码器表项次转换因子
+EncTable[4].index3=0
+EncTable[4].index4=0
+EncTable[4].index5=0
+EncTable[4].index6=0
+EncTable[4].MaxDelta=0  //编码器表项最大合法输出更改  
+EncTable[4].SinBias=0  //编码器表项正弦项偏移量
+EncTable[4].CosBias=0 
+EncTable[4].ScaleFactor=1 //编码器表项输出比例因子  ，1为单字
+
+
+
+
+
+EncTable[5].type=0   

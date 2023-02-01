@@ -1,0 +1,20 @@
+
+// Configure Server Socket for LOOPBACK
+// to the Power Pmac Modbus Server
+// and setup port and timeouts
+Modbus[0].Config.ServerPort=0			//Zero defaults to Modbus port 502)
+Modbus[0].Config.ConnectTimeOut=6000	// 0, defaults to 0s timeout, minimum = 5200 msec timeout'
+Modbus[0].Config.SendRecvTimeOut=0		//0. defaults to 6300 msec timeout 5 of 6 Retransmissions									
+										// Minimum is 3100 msec 4 of 6 Retransmissions										
+Modbus[0].Config.serverMode=0			// This is default. Set bit 0 == 1, to swap words on 32bit floats to Server, Normally MSW,LSW. Swap goes LSW, MSW
+Modbus[0].Config.UnitID=0				// This is default and the is the UnitID sent in the Modbus Header
+Modbus[0].Config.ServerIpAddr[0]=127	//This is the LOOPBACK IP Address so is connecting to this Power Pmac
+Modbus[0].Config.serverIpAddr[1]=0
+Modbus[0].Config.serverIpAddr[2]=0
+Modbus[0].Config.serverIpAddr[3]=1
+#ifdef KEEP_ALIVE
+Modbus[0].Config.KeepAliveEnable=1		// This enables KEEP ALIVE
+Modbus[0].Config.KeepAliveIdle=40		// Idle time(seconds) before KEEP ALIVE is sent; == 0 use Os value
+Modbus[0].Config.KeepAliveInterval=10	// Interval time(seconds) for KEEP ALIVE if no response; == 0 use OS value
+Modbus[umac].Config.KeepAliveCnt = 3	// Interval count for KEEP ALIVE if no response; == 0 use Os value
+#endif

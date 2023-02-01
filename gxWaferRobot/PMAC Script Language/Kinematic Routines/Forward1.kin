@@ -1,0 +1,55 @@
+// 双臂晶圆机器人正解
+//====================================================================================
+// Power PMAC Script Forward Kinematic Program (.kin)
+// Folder: "PMAC Script Language\Kinematic Routines"
+//====================================================================================
+// Forward Kinematics Setup 
+Coord[1].SegMoveTime = 2; // 2 msec segmentation period 
+&1 
+csglobal Len1, Len2,MAX_D; // Link length variables 
+csglobal CtsPerMM_P1, MMPerCt_P1,CtsPerDeg_P2, DegPerCt_P2,CtsPerDeg_P3, DegPerCt_P3,CtsPerDeg_P4, DegPerCt_P4; // Resolution of both joints 
+//csglobal FwdKinErr; // Error flag for routine 
+Len1 = 185 // 大臂和小臂R=185mm 
+Len2 = 0 // 暂定夹具部分总长度272mm（伸缩方向分量） 
+MAX_D=360//大臂小臂最大伸展长度限制
+CtsPerMM_P1 = 1 // Counts per degree for P1 //暂定升降电机减速比
+MMPerCt_P1 = 1/1 // Degrees per count for P1
+CtsPerDeg_P2 = 1 // Counts per degree for P2 //暂定水平面旋转电机减速比
+DegPerCt_P2 = 1/1 // Degrees per count for P2
+CtsPerDeg_P3 = 1 // Counts per degree for P3 //暂定大臂小臂关节电机减速比
+DegPerCt_P3 = 1/1 // Degrees per count for P3
+CtsPerDeg_P4 = 1 // Counts per degree for P4 //暂定大臂小臂关节电机减速比
+DegPerCt_P4 = 1/1 // Degrees per count for P4&1 
+
+open forward 
+if (KinVelEna>0) callsub 100; 
+KinAxisUsed =  $100 + $40 + $8 + $20000000;
+N100: 
+local MAX_Deg//大臂小臂最大伸展角度限制
+ MAX_Deg=asind(0.5*MAX_D/Len1)
+
+
+ //Coord[1].HomeComplete &&  
+if ( abs(KinPosMotor3*DegPerCt_P3)<MAX_Deg && abs(KinPosMotor4*DegPerCt_P4)<MAX_Deg) // OK? 
+{ 
+KinPosAxisZ=KinPosMotor1*MMPerCt_P1;//电机1为Z轴升降电机，方向现场定
+KinPosAxisU=KinPosMotor2*DegPerCt_P2; //电机2为水平面旋转电机，方向现场定
+KinPosAxisX=2*Len1*sind(KinPosMotor3*DegPerCt_P3)+Len2; //电机3为大臂小臂关节电机（大臂与垂直面夹角，臂收缩方向为－）
+KinPosAxisXX=2*Len1*sind(KinPosMotor4*DegPerCt_P4)+Len2;
+} 
+else // Not valid; halt operation 
+{ 
+if (Ldata.Status & $40) // Called from motion program? 
+{ 
+Coord[1].ErrorStatus = 255; // User-set aborting error 
+} 
+else // Called from axis query
+  {
+  KinPosAxisZ = sqrt(-1); // Return "not-a-number" 
+  KinPosAxisX = sqrt(-1); // Return "not-a-number“ 
+  KinPosAxisU = sqrt(-1); // Return "not-a-number“
+  KinPosAxisXX = sqrt(-1); // Return "not-a-number“ 
+   } 
+  }
+  //return;
+   close

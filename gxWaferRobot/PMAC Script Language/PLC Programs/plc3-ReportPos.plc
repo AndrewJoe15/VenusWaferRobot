@@ -1,0 +1,16 @@
+ open plc 3
+// --------------------User Code Goes Here------------------------
+//读取实时坐标位置
+Ldata.coord = 1 // Select coordinate system 1 读取1号坐标系数据
+PREAD			//读取实际位置
+ReportActPosZ = D8 // Actual Z
+ReportActPosT = D3 // Actual U
+ReportActPosR = D6 // Actual X
+ReportActPosW = D29 // Actual XX
+
+DREAD			//读取命令位置
+ReportDesPosZ = D8 // Desired Z
+ReportDesPosT = D3 // Desired U
+ReportDesPosR = D6 // Desired X
+ReportDesPosW = D29 // Desired XX
+close

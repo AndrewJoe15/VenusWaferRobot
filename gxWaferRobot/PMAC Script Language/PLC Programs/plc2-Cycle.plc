@@ -1,0 +1,125 @@
+ open plc 2
+// --------------------User Code Goes Here------------------------
+
+//点动速度设置
+Motor[1].JogSpeed=JogVel/1000 //Jog速度,每毫秒
+Motor[1].JogTa= -1000/(JogVel * 9.806)  //点动加速度
+Motor[1].JogTs= -1000000/(JogVel * 9.806) //点动加加速度
+
+Motor[2].JogSpeed=JogVel/1000 //Jog速度,每毫秒
+Motor[2].JogTa=-1000/(JogVel * 9.806)  //点动加速度
+Motor[2].JogTs=-1000000/(JogVel * 9.806) //点动加加速度
+
+Motor[3].JogSpeed=JogVel/1000 //Jog速度,每毫秒
+Motor[3].JogTa=-1000/(JogVel * 9.806)  //点动加速度
+Motor[3].JogTs=-1000000/(JogVel * 9.806) //点动加加速度
+
+Motor[4].JogSpeed=JogVel/1000 //Jog速度,每毫秒
+Motor[4].JogTa=-1000/(JogVel * 9.806)  //点动加速度
+Motor[4].JogTs=-1000000/(JogVel * 9.806) //点动加加速度
+
+//回原速度设置
+Motor[1].HomeVel=5/1000 //回零速度,每毫秒
+Motor[2].HomeVel=5/1000 //回零速度,每毫秒
+Motor[3].HomeVel=5/1000 //回零速度,每毫秒
+Motor[4].HomeVel=5/1000 //回零速度,每毫秒
+
+
+//错误状态
+	if (Coord[1].ErrorStatus!=0 || Coord[1].AmpFault!=0 || PowerOnError||ECAT[0].Error!=0)
+	{
+		ErrorStatu=1
+	}
+	else
+	{
+		ErrorStatu=0
+	}
+
+	//判断使能状态，未使能时执行上使能
+if (ErrorStatu!=1 && (DeadMan || AutoRun))
+{
+	call MotorEnable.PowerOn(1,&PowerStatus,&PowerOnError)
+}
+else
+{
+	call MotorEnable.PowerOn(0,&PowerStatus,&PowerOnError)
+}
+
+
+
+
+//ModbusTcp 通讯
+
+//上位机写入
+
+
+//位写入
+
+//1-2
+//Sys.Cdata[0]=Sys.ModbusServerBuffer[0];  //各轴点动
+//Sys.Cdata[1]=Sys.ModbusServerBuffer[1];
+//Sys.Cdata[2]=Sys.ModbusServerBuffer[2];
+//Sys.Cdata[3]=Sys.ModbusServerBuffer[3];
+
+
+
+
+
+
+//字写入
+//201-202    (403+1)/2
+JogVel=Sys.udata[100];
+Sys.Cdata[400]=Sys.ModbusServerBuffer[400];
+Sys.Cdata[401]=Sys.ModbusServerBuffer[401];
+Sys.Cdata[402]=Sys.ModbusServerBuffer[402];
+Sys.Cdata[403]=Sys.ModbusServerBuffer[403];
+
+
+
+//上位机读取
+
+//位读取
+
+
+
+
+//字读取
+
+//Z轴实时位置  2001-2002
+Sys.fdata[1000]=ReportActPosZ; 
+Sys.ModbusServerBuffer[4000]=Sys.Cdata[4000];
+Sys.ModbusServerBuffer[4001]=Sys.Cdata[4001];
+Sys.ModbusServerBuffer[4002]=Sys.Cdata[4002];
+Sys.ModbusServerBuffer[4003]=Sys.Cdata[4003];
+
+
+//T轴实时位置  2003-2004
+Sys.fdata[1001]=ReportActPosT; 
+Sys.ModbusServerBuffer[4004]=Sys.Cdata[4004];
+Sys.ModbusServerBuffer[4005]=Sys.Cdata[4005];
+Sys.ModbusServerBuffer[4006]=Sys.Cdata[4006];
+Sys.ModbusServerBuffer[4007]=Sys.Cdata[4007];
+
+//R轴实时位置  2005-2006
+Sys.fdata[1002]=ReportActPosR; 
+Sys.ModbusServerBuffer[4008]=Sys.Cdata[4008];
+Sys.ModbusServerBuffer[4009]=Sys.Cdata[4009];
+Sys.ModbusServerBuffer[4010]=Sys.Cdata[4010];
+Sys.ModbusServerBuffer[4011]=Sys.Cdata[4011];
+
+//W轴实时位置  2007-2008
+Sys.fdata[1003]=ReportActPosW; 
+Sys.ModbusServerBuffer[4012]=Sys.Cdata[4012];
+Sys.ModbusServerBuffer[4013]=Sys.Cdata[4013];
+Sys.ModbusServerBuffer[4014]=Sys.Cdata[4014];
+Sys.ModbusServerBuffer[4015]=Sys.Cdata[4015];
+
+
+
+
+
+
+
+
+
+close

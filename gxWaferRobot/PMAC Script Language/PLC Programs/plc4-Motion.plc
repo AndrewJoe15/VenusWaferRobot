@@ -1,0 +1,45 @@
+ open plc 4
+// --------------------User Code Goes Here------------------------
+
+switch (RunMode)
+{
+	case 1 :
+		//回零操作
+		HomeStatus=0
+		call Movement.HomeSerch(HomeMode,&HomeStatus)
+		//while(HomeStatus!=0){}//等待回零完成
+		RunMode=0;
+		break;
+	case 2 :
+		
+		while(true)
+		{ 
+		AutoRun=1
+		while(PowerStatus==0){}//等待使能完成
+		start 1:Myprog1		//运动程序
+		while(MoveEnd==0){}  //运动完成判断
+		if (RunStop)
+		{
+		RunMode=0
+		AutoRun=0
+		RunStop=0;
+		break;
+		}
+		}
+		break;
+	default: 
+	
+	RunMode=0;
+	break;
+}
+
+//点动操作
+if(DeadMan && Coord[1].AmpEna && Breaker_ON)
+{
+	call Movement.RobotJog(Z_JOGP,Z_JOGN,T_JOGP,T_JOGN,R_JOGP,R_JOGN,W_JOGP,W_JOGN,&JogStatus)
+}
+
+
+
+
+close

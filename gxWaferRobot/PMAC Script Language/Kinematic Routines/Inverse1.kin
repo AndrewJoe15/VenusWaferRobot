@@ -1,0 +1,37 @@
+
+//双臂晶圆机器人反解
+
+
+//====================================================================================
+// Power PMAC Script Inverse Kinematic Program (.kin)
+// Folder: "PMAC Script Language\Kinematic Routines"
+//====================================================================================
+
+
+// Auto-assigned variable declarations 
+//#define KinPosMotor1 L1 
+//#define KinPosMotor2 L2 
+//#define KinPosAxisX C6 
+//#define KinPosAxisY C7 
+//#define KinAxisUsed D0 
+// (Also uses variables declared in forward-kinematic example) 
+//csglobal TwoLen1; // 2*Len1 
+// Pre-compute additional system constants
+//&& (KinPosAxisX<(Len2+Len1*2) 
+ &1 
+ csglobal InvKinErr; // Error flag for routine 
+ open inverse // Open buffer, clear contents // Declare local variables for routine 
+  if ((Len2-MAX_D)<KinPosAxisX && KinPosAxisX<(Len2+MAX_D) && (Len2-MAX_D)<KinPosAxisXX && KinPosAxisXX<(Len2+MAX_D)) // Valid solution w/ 1 deg margin? 
+ {
+ KinPosMotor1 = KinPosAxisZ * CtsPerMM_P1; 
+ KinPosMotor2 = KinPosAxisU * CtsPerDeg_P2;
+ KinPosMotor3 = asind((KinPosAxisX-Len2)/2/Len1)*CtsPerDeg_P3;
+ KinPosMotor4 = asind((KinPosAxisXX-Len2)/2/Len1)*CtsPerDeg_P4;
+  } 
+  else // Not valid, halt operation 
+  { 
+  InvKinErr = 1; // Set flag for external use 
+  Coord[1].ErrorStatus = 255; // Stop execution 
+  } 
+  close
+//====================================================================================

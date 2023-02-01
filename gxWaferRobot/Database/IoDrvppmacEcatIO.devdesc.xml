@@ -1,0 +1,672 @@
+			<ParameterSection>
+			<Name name="local:ps1">ECATIO</Name>
+			<Description name="local:ps1.Desc">ECAT I/O</Description>
+			<ParameterSection>
+			<Name name="local:ps1">ECAT[0]</Name>
+			<Description name="local:ps1.Desc">ECAT[0] input/output</Description>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6000_1_DI015</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4096].Data</Description>
+			<Parameter ParameterId="4096" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6002_1_TemperatureAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4097].Data</Description>
+			<Parameter ParameterId="4097" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6002_2_VoltageAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4098].Data</Description>
+			<Parameter ParameterId="4098" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6010_1_DI015</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4099].Data</Description>
+			<Parameter ParameterId="4099" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6012_1_TemperatureAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4100].Data</Description>
+			<Parameter ParameterId="4100" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6012_2_VoltageAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4101].Data</Description>
+			<Parameter ParameterId="4101" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6022_1_TemperatureAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4102].Data</Description>
+			<Parameter ParameterId="4102" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6022_2_VoltageAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4103].Data</Description>
+			<Parameter ParameterId="4103" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6022_3_DriverAbnormalAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4104].Data</Description>
+			<Parameter ParameterId="4104" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6032_1_TemperatureAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4105].Data</Description>
+			<Parameter ParameterId="4105" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6032_2_VoltageAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4106].Data</Description>
+			<Parameter ParameterId="4106" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_6032_3_DriverAbnormalAlarm</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4107].Data</Description>
+			<Parameter ParameterId="4107" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_603F_0_Errorcode</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4108].Data</Description>
+			<Parameter ParameterId="4108" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_6041_0_Statusword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4109].Data</Description>
+			<Parameter ParameterId="4109" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_6064_0_Positionactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4110].Data</Description>
+			<Parameter ParameterId="4110" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_6077_0_Torqueactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4111].Data</Description>
+			<Parameter ParameterId="4111" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60F4_0_Followingerroractualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4112].Data</Description>
+			<Parameter ParameterId="4112" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60B9_0_Touchprobestatus</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4113].Data</Description>
+			<Parameter ParameterId="4113" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60BA_0_Touchprobepos1posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4114].Data</Description>
+			<Parameter ParameterId="4114" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60BC_0_Touchprobepos2posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4115].Data</Description>
+			<Parameter ParameterId="4115" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60FD_0_Digitalinputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4116].Data</Description>
+			<Parameter ParameterId="4116" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_603F_0_Errorcode</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4117].Data</Description>
+			<Parameter ParameterId="4117" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_6041_0_Statusword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4118].Data</Description>
+			<Parameter ParameterId="4118" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_6064_0_Positionactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4119].Data</Description>
+			<Parameter ParameterId="4119" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_6077_0_Torqueactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4120].Data</Description>
+			<Parameter ParameterId="4120" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60F4_0_Followingerroractualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4121].Data</Description>
+			<Parameter ParameterId="4121" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60B9_0_Touchprobestatus</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4122].Data</Description>
+			<Parameter ParameterId="4122" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60BA_0_Touchprobepos1posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4123].Data</Description>
+			<Parameter ParameterId="4123" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60BC_0_Touchprobepos2posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4124].Data</Description>
+			<Parameter ParameterId="4124" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60FD_0_Digitalinputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4125].Data</Description>
+			<Parameter ParameterId="4125" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_603F_0_Errorcode</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4126].Data</Description>
+			<Parameter ParameterId="4126" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_6041_0_Statusword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4127].Data</Description>
+			<Parameter ParameterId="4127" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_6064_0_Positionactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4128].Data</Description>
+			<Parameter ParameterId="4128" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_6077_0_Torqueactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4129].Data</Description>
+			<Parameter ParameterId="4129" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60F4_0_Followingerroractualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4130].Data</Description>
+			<Parameter ParameterId="4130" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60B9_0_Touchprobestatus</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4131].Data</Description>
+			<Parameter ParameterId="4131" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60BA_0_Touchprobepos1posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4132].Data</Description>
+			<Parameter ParameterId="4132" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60BC_0_Touchprobepos2posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4133].Data</Description>
+			<Parameter ParameterId="4133" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60FD_0_Digitalinputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4134].Data</Description>
+			<Parameter ParameterId="4134" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_603F_0_Errorcode</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4135].Data</Description>
+			<Parameter ParameterId="4135" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_6041_0_Statusword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4136].Data</Description>
+			<Parameter ParameterId="4136" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_6064_0_Positionactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4137].Data</Description>
+			<Parameter ParameterId="4137" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_6077_0_Torqueactualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4138].Data</Description>
+			<Parameter ParameterId="4138" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60F4_0_Followingerroractualvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4139].Data</Description>
+			<Parameter ParameterId="4139" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60B9_0_Touchprobestatus</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4140].Data</Description>
+			<Parameter ParameterId="4140" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60BA_0_Touchprobepos1posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4141].Data</Description>
+			<Parameter ParameterId="4141" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60BC_0_Touchprobepos2posvalue</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4142].Data</Description>
+			<Parameter ParameterId="4142" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60FD_0_Digitalinputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4143].Data</Description>
+			<Parameter ParameterId="4143" type="std:BOOL">
+			<Attributes channel="input" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:in">INPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_7020_1_DO015</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[0].Data</Description>
+			<Parameter ParameterId="0" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1001_EX_1100_1001_7030_1_DO015</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[1].Data</Description>
+			<Parameter ParameterId="1" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_6040_0_Controlword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[2].Data</Description>
+			<Parameter ParameterId="2" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_607A_0_Targetposition</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[3].Data</Description>
+			<Parameter ParameterId="3" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60B8_0_Touchprobefunction</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[4].Data</Description>
+			<Parameter ParameterId="4" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1002_InoSV660N_1002_60FE_1_Physicaloutputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[5].Data</Description>
+			<Parameter ParameterId="5" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_6040_0_Controlword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[6].Data</Description>
+			<Parameter ParameterId="6" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_607A_0_Targetposition</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[7].Data</Description>
+			<Parameter ParameterId="7" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60B8_0_Touchprobefunction</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[8].Data</Description>
+			<Parameter ParameterId="8" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1003_InoSV660N_1003_60FE_1_Physicaloutputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[9].Data</Description>
+			<Parameter ParameterId="9" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_6040_0_Controlword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[10].Data</Description>
+			<Parameter ParameterId="10" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_607A_0_Targetposition</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[11].Data</Description>
+			<Parameter ParameterId="11" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60B8_0_Touchprobefunction</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[12].Data</Description>
+			<Parameter ParameterId="12" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1004_InoSV660N_1004_60FE_1_Physicaloutputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[13].Data</Description>
+			<Parameter ParameterId="13" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_6040_0_Controlword</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[14].Data</Description>
+			<Parameter ParameterId="14" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_607A_0_Targetposition</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[15].Data</Description>
+			<Parameter ParameterId="15" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60B8_0_Touchprobefunction</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[16].Data</Description>
+			<Parameter ParameterId="16" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			<ParameterSection>
+			<Name name="local:ps1">Slave_1005_InoSV660N_1005_60FE_1_Physicaloutputs</Name>
+			<Description name="local:ps1.Desc">ECAT[0].IO[17].Data</Description>
+			<Parameter ParameterId="17" type="std:BOOL">
+			<Attributes channel="output" download="true" functional="false" offlineaccess="readwrite" onlineaccess="readwrite" driverSpecific="1"/>
+			<Default>0</Default>
+			<Name name="local:out">OUTPUT</Name>
+			<Unit name="local:ps1.Unit">BOOL</Unit>
+			</Parameter>
+			</ParameterSection>
+			</ParameterSection>
+				</ParameterSection>
+			</HostParameterSet>
+		</Connector>
+	</Device>
+</DeviceDescription>

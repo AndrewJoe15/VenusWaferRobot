@@ -1,0 +1,52 @@
+
+
+global ReportDesPosZ = 0, ReportDesPosT = 0, ReportDesPosR = 0, ReportDesPosW = 0
+
+global PowerStatus=0 //使能执行状态
+global PowerOnError=0
+global ErrorStatu=0
+
+global AutoRun
+
+global RunMode,JogStatus
+global true=1,false=0,RunStop,HomeMode,HomeStatus
+
+//站点参数
+global WorkARM_A,StationPos_A,WaferSize_A,Pitch_A,Stroke_A,Offset_A,TotalSlotNumber_A,RetractPos_A //站点A参数
+global WorkARM_B,StationPos_B,WaferSize_B,Pitch_B,Stroke_B,Offset_B,TotalSlotNumber_B,RetractPos_B //站点B参数
+global WorkARM_C,StationPos_C,WaferSize_C,Pitch_C,Stroke_C,Offset_C,TotalSlotNumber_C,RetractPos_C //站点C参数
+global WorkARM_D,StationPos_D,WaferSize_D,Pitch_D,Stroke_D,Offset_D,TotalSlotNumber_D,RetractPos_D //站点D参数
+global WorkARM_E,StationPos_E,WaferSize_E,Pitch_E,Stroke_E,Offset_E,TotalSlotNumber_E,RetractPos_E //站点E参数
+global WorkARM_F,StationPos_F,WaferSize_F,Pitch_F,Stroke_F,Offset_F,TotalSlotNumber_F,RetractPos_F //站点F参数
+global WorkARM_G,StationPos_G,WaferSize_G,Pitch_G,Stroke_G,Offset_G,TotalSlotNumber_G,RetractPos_G //站点G参数
+global WorkARM_H,StationPos_H,WaferSize_H,Pitch_H,Stroke_H,Offset_H,TotalSlotNumber_H,RetractPos_H //站点H参数
+global WorkARM_I,StationPos_I,WaferSize_I,Pitch_I,Stroke_I,Offset_I,TotalSlotNumber_I,RetractPos_I //站点I参数
+global WorkARM_J,StationPos_J,WaferSize_J,Pitch_J,Stroke_J,Offset_J,TotalSlotNumber_J,RetractPos_J //站点J参数
+
+
+
+
+//位写入
+
+//点动运行
+ptr Z_JOGP->u.user:0.0.1
+ptr Z_JOGN->u.user:0.1.1
+ptr T_JOGP->u.user:0.2.1
+ptr T_JOGN->u.user:0.3.1
+ptr R_JOGP->u.user:0.4.1
+ptr R_JOGN->u.user:0.5.1
+ptr W_JOGP->u.user:0.6.1
+ptr W_JOGN->u.user:0.7.1
+
+//字写入
+//点动速度
+ptr JogVel->*u
+
+ptr WorkARM->*u,StationPos->*f, WaferSize->*u,Pitch->*u,Stroke->*u,Offset->*f,TotalSlotNumber->*u,RetractPos->*f  //站点参数
+
+//字读取
+//坐标位置
+ptr ReportActPosZ->*f
+ptr ReportActPosT->*f
+ptr ReportActPosR->*f
+ptr ReportActPosW->*f
